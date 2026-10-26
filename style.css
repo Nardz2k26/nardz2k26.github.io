@@ -143,18 +143,42 @@ a:hover {
    BUTTONS
 ======================================== */
 
-<div class="button-group">
-  <a class="button" href="case-studies.html">Explore Case Studies</a>
-  <a class="button" href="contact.html">Contact Me</a>
-  <a
-    class="button"
-    href="./Leonardo_Paran_AML_Financial_Crime_Specialist_Resume.pdf"
-    target="_blank"
-    rel="noopener"
-  >Download Resume</a>
-</div>
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+}
 
+.button-group .button {
+  display: inline-block;
+  padding: 12px 20px;
+  border: 1px solid var(--gold);
+  border-radius: 8px;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  transition: background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
 
+.button-group .button:hover {
+  background: #d8bd8e;
+  border-color: #d8bd8e;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.button-group .button:focus-visible {
+  outline: 3px solid var(--white);
+  outline-offset: 3px;
+}
 
 /* ========================================
    SECTIONS
@@ -392,6 +416,16 @@ a:hover {
 
   .site-nav a {
     font-size: 0.85rem;
+  }
+
+  .button-group {
+    gap: 12px;
+  }
+
+  .button-group .button {
+    padding: 11px 15px;
+    font-size: 0.9rem;
+    white-space: normal;
   }
 
   .contact-panel {
