@@ -56,6 +56,10 @@ a:hover {
   margin-inline: auto;
 }
 
+/* ========================================
+   HEADER & NAVIGATION
+======================================== */
+
 .site-header {
   position: sticky;
   top: 0;
@@ -69,12 +73,13 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  flex-wrap: wrap;
+  gap: 16px;
+  flex-wrap: nowrap;
   padding-block: 12px;
 }
 
 .brand {
+  flex: 0 0 auto;
   color: var(--navy);
   font-size: 1.05rem;
   font-weight: 800;
@@ -85,11 +90,13 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: 8px 20px;
+  flex-wrap: nowrap;
+  gap: 8px 16px;
+  white-space: nowrap;
 }
 
 .site-nav a {
+  flex: 0 0 auto;
   color: var(--text);
   font-size: 0.92rem;
   font-weight: 600;
@@ -99,6 +106,10 @@ a:hover {
 .site-nav a.active {
   color: var(--blue);
 }
+
+/* ========================================
+   HERO
+======================================== */
 
 .hero {
   padding: 88px 0;
@@ -127,6 +138,10 @@ a:hover {
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
+
+/* ========================================
+   BUTTONS
+======================================== */
 
 .button {
   display: inline-block;
@@ -164,6 +179,10 @@ a:hover {
   margin-top: 28px;
 }
 
+/* ========================================
+   SECTIONS
+======================================== */
+
 .section {
   padding: 64px 0;
 }
@@ -184,6 +203,10 @@ a:hover {
   margin: 0 0 32px;
   color: var(--muted);
 }
+
+/* ========================================
+   GRID & CARDS
+======================================== */
 
 .grid {
   display: grid;
@@ -210,6 +233,10 @@ a:hover {
   margin-bottom: 0;
 }
 
+/* ========================================
+   SKILL TAGS
+======================================== */
+
 .tag-list {
   display: flex;
   flex-wrap: wrap;
@@ -226,6 +253,10 @@ a:hover {
   color: var(--navy);
   font-size: 0.85rem;
 }
+
+/* ========================================
+   INNER PAGE HEADERS
+======================================== */
 
 .page-header {
   padding: 54px 0;
@@ -245,6 +276,10 @@ a:hover {
   margin-bottom: 0;
   color: var(--muted);
 }
+
+/* ========================================
+   CASE STUDIES & EXPERIENCE
+======================================== */
 
 .case-link {
   display: inline-block;
@@ -266,6 +301,10 @@ a:hover {
   padding-bottom: 0;
 }
 
+/* ========================================
+   CONTACT
+======================================== */
+
 .contact-panel {
   padding: 32px;
   border-radius: var(--radius);
@@ -282,6 +321,10 @@ a:hover {
   overflow-wrap: anywhere;
 }
 
+/* ========================================
+   FOOTER
+======================================== */
+
 .site-footer {
   padding: 28px 0;
   border-top: 1px solid var(--border);
@@ -295,9 +338,36 @@ a:hover {
   margin: 0;
 }
 
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
 :focus-visible {
   outline: 3px solid var(--gold);
   outline-offset: 3px;
+}
+
+/* ========================================
+   TABLET & SMALLER SCREENS
+======================================== */
+
+@media (max-width: 1000px) {
+  .nav-container {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+  }
+
+  .site-nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    white-space: normal;
+    gap: 8px 14px;
+  }
+
+  .site-nav a {
+    font-size: 0.88rem;
+  }
 }
 
 @media (max-width: 800px) {
@@ -312,15 +382,11 @@ a:hover {
   .section {
     padding: 48px 0;
   }
-
-  .nav-container {
-    justify-content: center;
-  }
-
-  .site-nav {
-    justify-content: center;
-  }
 }
+
+/* ========================================
+   MOBILE
+======================================== */
 
 @media (max-width: 560px) {
   body {
@@ -339,8 +405,12 @@ a:hover {
     padding: 21px;
   }
 
+  .nav-container {
+    gap: 8px;
+  }
+
   .site-nav {
-    gap: 10px 14px;
+    gap: 8px 12px;
   }
 
   .site-nav a {
@@ -351,4 +421,3 @@ a:hover {
     padding: 24px;
   }
 }
-
