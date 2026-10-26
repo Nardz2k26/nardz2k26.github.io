@@ -46,19 +46,33 @@
       <span>Fraud Investigation</span>
       <span>Risk &amp; Compliance</span>
     </div>
-    <div class="button-group">
-      <a class="button" href="case-studies.html">Explore Case Studies</a>
-      <a class="button" href="contact.html">Contact Me</a>
-      <a
-  href="Leonardo_Paran_AML_Financial_Crime_Resume.pdf"
-  class="button"
-  target="_blank"
-  rel="noopener"
-  download
->
-  Download Resume
-</a>
-    </div>
+    
+.button-group {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.button-group .button {
+  padding: 10px 14px;
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 560px) {
+  .button-group {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .button-group .button {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+}
+
   </section>
 
   <section class="section">
